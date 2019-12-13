@@ -26,26 +26,17 @@ function Home({ navigation }) {
 
   const handleDistressCall = async () => {
     try {
-      /* const response = await TotalVoice.tts.enviar(
-        '24988231986',
-        'Recebemos uma pedido de socorro de um dos veiculos da frota, acesse o sitema para acompanhar o pedido em tempo real. Em instantes você receberá uma mensagem com maiores detalhes',
-        {
-          velocidade: -1,
-          tipo_voz: 'br-Vitoria',
-          detecta_caixa: true,
-        }
+      const response = await TotalVoice.tts.enviar(
+        'Recebemos uma pedido de socorro de um dos veiculos da frota, acesse o sitema para acompanhar o pedido em tempo real. Em instantes você receberá uma mensagem com maiores detalhes'
       );
       console.tron.log(response);
 
       const gpsLocation = `http://maps.google.com/?q=${location.coords.latitude},${location.coords.longitude}`;
       const response2 = await TotalVoice.sms.enviar(
-        '24988231986',
-        `Pedido de socorro recebido pelo veiculo xxx, acompanhe em ${gpsLocation}`,
-        false,
-        false
+        `Pedido de socorro recebido pelo veiculo xxx, acompanhe em ${gpsLocation}`
       );
       console.tron.log(response2);
-      console.tron.log(gpsLocation); */
+      console.tron.log(gpsLocation);
       Alert.alert('Sua solicitação foi enviada');
     } catch (err) {
       console.tron.log(err);
